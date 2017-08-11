@@ -24,53 +24,52 @@
 const deepFreeze = require('deep-freeze');
 
 const categories = {
-  "headquarters": {
-    "category": "headquarters",
-    "suggestion": "Headquarters",
+  "WordLift": {
+    "category": "WordLift",
+    "suggestion": "WordLift",
     "facts": [
-      "Google's headquarters is in Mountain View, California.",
-      "Google has over 30 cafeterias in its main campus.",
-      "Google has over 10 fitness facilities in its main campus."
+      "WordLift is a plugin for WordPress that uses AI to organize content.",
+      "WordLift development began in 2011.",
+      "There are already 404190 entities created by users with WordLift."
     ],
-    "factPrefix": "Okay, here's a headquarters fact."
+    "factPrefix": "Okay, here's a WordLift fact."
   },
-  "history": {
-    "category": "history",
-    "suggestion": "History",
+  "Scott": {
+    "category": "Scott",
+    "suggestion": "Scott Abel",
     "facts": [
-      "Google was founded in 1998.",
-      "Google was founded by Larry Page and Sergey Brin.",
-      "Google went public in 2004.",
-      "Google has more than 70 offices in more than 40 countries."
+      "Scott Abel is an American author, content strategist and technology evangelist.",
+      "Scott is CEO and co-founder of The Content Wrangler.",
+      "Scott is co-author of two books: Intelligent Content: A Primer and The Language of Content Strategy."
     ],
-    "factPrefix": "Sure, here's a history fact."
+    "factPrefix": "Okay, here's something about Scott."
   }
 };
 
 const content = {
   "images": [
     [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_GSA.2e16d0ba.fill-300x300.png",
-      "Google app logo"
+      "https://wordlift.io/blog/en/wp-content/uploads/sites/3/2017/04/PASO-Google-Assistant.jpg",
+      "What is WordLift"
     ],
     [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Logo.max-900x900.png",
-      "Google logo"
+      "http://docs.wordlift.io/en/latest/_images/wordlift-publish-entity-lodlive.png",
+      "WordLift's graph on LodLive"
     ],
     [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinosaur-skeleton-at-Google.max-900x900.jpg",
-      "Stan the Dinosaur at Googleplex"
+      "https://wordlift.io/blog/en/wp-content/uploads/sites/3/2017/01/wordlift_outside.png",
+      "Our offices in via Giulia 117, in the heart of Rome"
     ],
     [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Wide-view-of-Google-campus.max-900x900.jpg",
-      "Googleplex"
+      "https://wordlift.io/blog/en/wp-content/uploads/sites/3/2017/04/wordlift-nap-assistant.png",
+      "WordLift's phone number"
     ],
     [
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Bikes-on-the-Google-campus.2e16d0ba.fill-300x300.jpg",
-      "Biking at Googleplex"
+      "https://wordlift.io/blog/en/wp-content/uploads/sites/3/2017/03/publisher-settings.gif",
+      "Publisher's settings"
     ]
   ],
-  "link": "https://www.google.com/about/"
+  "link": "https://wordlift.io"
 };
 
 const cats = {
@@ -99,11 +98,11 @@ const cats = {
 
 const transitions = {
   "content": {
-    "heardItAll": "Looks like you've heard all there is to know about the %s of Google. I could tell you about its %s instead.",
+    "heardItAll": "Looks like you've heard all there is to know about %s. I could tell you about %s instead.",
     "alsoCats": "By the way, I can tell you about cats too."
   },
   "cats": {
-    "heardItAll": "Looks like you've heard all there is to know about cats. Would you like to hear about Google?"
+    "heardItAll": "Looks like you've heard all there is to know about cats. Would you like to hear about WordLift?"
   }
 };
 
@@ -125,7 +124,7 @@ const general = {
   "nextFact": "Would you like to hear another fact?",
   "linkOut": "Learn more",
   "wantWhat": "So what would you like to hear about?",
-  "unhandled": "Welcome to Facts about Google! I'd really rather not talk about %s. Wouldn't you rather talk about Google? I can tell you about Google's history or its headquarters. Which do you want to hear about?"
+  "unhandled": "Welcome to Facts about WordLift! I'd really rather not talk about %s. Wouldn't you rather talk about WordLift? I can tell you about WordLift or introduce you Scott Abel. Which do you want to hear about?"
 };
 
 // Use deepFreeze to make the constant objects immutable so they are not unintentionally modified
